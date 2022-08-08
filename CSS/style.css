@@ -1,8 +1,12 @@
+/* Propriedades da minha div(jogo-do-mario) */
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
+
+/* classes */
 .game-board {
     width: 80%;
     height: 500px;
@@ -16,20 +20,20 @@
     position: absolute;
     bottom: 0;
     width: 80px;
-    left: 150px;
     animation: pipe-animation 2s infinite linear;
 }
 
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0; 
+    bottom: 0;
 }
 
 .jump {
     animation: jump 500ms  ease-out;
 }
 
+/* keyframes de animacoes */
 @keyframes pipe-animation {
     from {
         right: -80px;
