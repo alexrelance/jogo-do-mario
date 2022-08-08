@@ -2,6 +2,7 @@
     const pipe = document.querySelector('.pipe');
 
     const jump = () => {
+        
         mario.classList.add('jump');
 
         setTimeout(() => {
@@ -9,9 +10,9 @@
         }, 500); 
     }
     
-    const loop - setInterval(() => {
+    const loop = setInterval(() => {
 
-        console.log('loop');
+        console.log('loop')
 
         const pipePosition = pipe.offsetLeft;
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
@@ -22,7 +23,7 @@
             pipe.style.left = `${pipePosition}px`;
 
             mario.style.animation = 'none';
-            mario.style.left = `${marioPosition}px`;
+            mario.style.bottom = `${marioPosition}px`;
 
             mario.src = './images/game-over.png';
             mario.style.width = '75px'
