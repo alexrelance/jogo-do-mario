@@ -1,5 +1,7 @@
     const mario = document.querySelector('.mario');
     const pipe = document.querySelector('.pipe');
+    const containerModal = document.querySelector('.modal-container');
+    const btn = document.querySelector('.btn');
 
     const jump = () => {
         
@@ -29,8 +31,15 @@
             mario.style.width = '75px'
             mario.style.marginLeft = '50px'
 
+            containerModal.classList.add("ativo");
+
             clearInterval(loop);
         }
     }, 10);
 
-document.addEventListener('keydown', jump);
+    document.addEventListener("click", jump);
+    document.addEventListener("keydown", jump);
+
+    btn.addEventListener("click", () => {
+        location.reload();
+    });
